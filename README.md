@@ -5,13 +5,10 @@ Python libraries pandas, numpy, seaborn, scipy, matplotlib and sklearn are prere
 #### Input Data to TranNet
 Quantity vector of a cancer-related phenotype across patents, corresponding bulk gene expression data, and spatially resolved transcriptomic data as cvs files
 ```
-Cancer = 'COAD'                # Provide the cancer that you want to analysis for bulk data processing such as 'BRCA', 'COAD', 'LUAD' and 'LUSC'
-Phenotype = 'Tumor-Purity'     # Provide the phenotype that you want to analysis for bulk data processing such as 'Tumor-Purity', 'Stemness' and 'Proliferation'
-BulkExpression = pd.read_csv(Cancer+'Bulk-ExprData.csv', index_col=0) # Load the bulk gene expression matrix (columns are genes and rows are patients)
-PhenotypeVector = pd.read_csv(Cancer+Phenotype+'.csv', index_col=0)     # Load the vector of phenotype quantity matched with the rows of bulk gene expression matrix (a vector across patients)
-SRTsample = 'Coloreactal-2.0.1' # Provide the SRT sample that you want to analysis for spatial transcriptomics such as Breast-1.1.0, 'Coloreactal-2.0.1', Lung-2.0.0 and Lung-2.0.1
-DataSRT = pd.read_csv(SRTsample+'SRT-ExprData.csv', index_col=0) # Load the SRT gene expression matrix (columns are spots and rows are genes)  
-MetaData = pd.read_csv(SRTsample+'SRT-spot-locations.csv', index_col=0) # Load the spot locations corresponding to SRT gene expression matrix
+BulkExpression = pd.read_csv('Cancer-Bulk-ExprData.csv', index_col=0) # Load the bulk gene expression matrix (columns are genes and rows are patients)
+PhenotypeVector = pd.read_csv('Cancer-Phenotype.csv', index_col=0)     # Load the vector of phenotype quantity matched with the rows of bulk gene expression matrix (a vector across patients)
+DataSRT = pd.read_csv('SRTsample-SRT-ExprData.csv', index_col=0) # Load the SRT gene expression matrix (columns are spots and rows are genes)  
+MetaData = pd.read_csv('SRTsample-SRT-spot-locations.csv', index_col=0) # Load the spot locations corresponding to SRT gene expression matrix
 ```
 #### To Run SpaceProfiler
 SpaceProfiler takes two matrices described above and return the transition weight matrix as output
@@ -36,8 +33,8 @@ For each of the SRT 11 samples, the SRT gene expression whose columns represent 
 
 #### Results of the analysis on four cancer data sets [Result](result)
 The following files proves the results for the analysis on BRCA, COAD, LUAD, LUSC cancer data.
-* Lists of the Eigen-Genes for cancers and phenotypes with the predicted values over patients [Eigen Genes](result/Eigen-Genes.xlsx).
-* Lists of the Eigen-Patients for cancers and phenotypes with the predicted values over patients [Eigen Patients](result/Eigen-Patients.xlsx).
-* GO terms enriched for the sorted list of top predictor genes [GO terms for predictors](result/GO-terms-Predictor-Genes.xlsx). The GO terms enriched for top negative and positive predictors in Eigen-Patient.
-* Predicted phenotype quantity on spots [Result](result/GO_terms_Well_Predicted_Genes.xlsx). Prediction based on similarity between Eigen-Patient and SRT gene expression in each spot.
+* Lists of the Eigen-Genes for cancers and phenotypes with the predicted values over patients [Eigen Genes](result/Eigen-Genes for Phenotypes.xlsx).
+* Lists of the Eigen-Patients for cancers and phenotypes with the predicted values over patients [Eigen Patients](result/Eigen-Patients for Phenotypes.xlsx).
+* GO terms enriched for the sorted list of top predictor genes [GO terms for predictors](result/GO-terms Enriched for Top Predictors.xlsx). The GO terms enriched for top negative and positive predictors in Eigen-Patient.
+* Predicted phenotype quantity on spots [Result](result/Predicted Phenotype Phenotype Quantity.xlsx). Prediction based on similarity between Eigen-Patient and SRT gene expression in each spot.
 * Plots showing the prediction results [Result](result)
