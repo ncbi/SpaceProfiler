@@ -21,7 +21,7 @@ As result, returns the Eigen-Gene vector, Eigen-Patient vector, Cosine similarit
 EigenGene.to_csv('Eigen-Gene.csv')                  # Save the Eigen-Gene vector as a cvs file
 EigenPatient.to_csv('Eigen-Patient.csv')            # Save the Eigen-Patient vector as a cvs file
 Result['Cosine-Similarity'].to_csv('Predicted-Phentype-On-Spots.csv')  # Save the predicted phenotype quantity vector as a cvs file
-plt.savefig('Prediction-Plot.png', dpi=300,  bbox_inches = 'tight')    # Plot the prediction of phenotype quantity
+plt.savefig('Prediction-Plot.png', dpi=300,  bbox_inches = 'tight')    # Save the prediction plot for phenotype quantity
 ```
 #### Python [Package](code)
 * The SpaceProfiler method is implemented in python and the codes are available as [Python Code](code/SpaceProfiler.py) and [Jupyter Notebook](code/SpaceProfiler.ipynb) modules.
