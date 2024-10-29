@@ -2,7 +2,7 @@
 SpaceProfiler: A computational method for translating information between different (but related) types of data
 #### Pre-required installations before running SpaceProfiler
 Python libraries pandas, numpy, seaborn, scipy, matplotlib and sklearn are prerequired to be installed before running SpaceProfiler
-#### Input Data to TranNet
+#### Input Data to SpaceProfiler
 Quantity vector of a cancer-related phenotype across patents, corresponding bulk gene expression data, and spatially resolved transcriptomic (SRT) data as cvs files
 ```
 BulkExpression = pd.read_csv('Cancer-Bulk-ExprData.csv', index_col=0)    # Load the bulk gene expression matrix (columns are genes and rows are patients)
@@ -39,4 +39,4 @@ The following files proves the results for the analysis on bulk data of cancer p
 #### Results of the bulk data analysis on four cancer data sets [Result](result)
 The following files proves the results for the analysis on spacial transcriptomics (SRT) data
 * Predicted phenotype quantity on spots [Result](result/Predicted Phenotype Phenotype Quantity.xlsx). Prediction based on similarity between Eigen-Patient and SRT gene expression in each spot.
-* Plots showing the prediction results [Result](result)
+* Plots for showing the prediction results over spatial location [Result](result)
