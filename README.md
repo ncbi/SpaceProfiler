@@ -24,7 +24,7 @@ Result['Cosine-Similarity'].to_csv('Predicted-Phentype-On-Spots.csv')  # Save th
 plt.savefig('Prediction-Plot.png', dpi=300,  bbox_inches = 'tight')    # Plot the prediction of phenotype quantity
 ```
 #### Python [Package](code)
-* The SpaceProfiler method is implemented in python and the codes are available as [Python Code](SpaceProfiler.py) and [Jupyter Notebook](SpaceProfiler.ipynb) modules.
+* The SpaceProfiler method is implemented in python and the codes are available as [Python Code](code/SpaceProfiler.py) and [Jupyter Notebook](code/SpaceProfiler.ipynb) modules.
 
 #### Bulk data sets for four cancers [Data](Bulk data)
 For each of the four cancer data sets (BRCA, COAD LUAD, LUSC), the phenotype quantity of patents (Tumor-Purity, Hazard, Stemness and Proliferation) and bulk gene expression matrices whose columns represent the genes and rows represent patients.
