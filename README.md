@@ -13,10 +13,10 @@ MetaData = pd.read_csv('SRTsample-SRT-spot-locations.csv', index_col=0)  # Load 
 #### To Run SpaceProfiler
 SpaceProfiler takes a phenotype quantity vector and a bulk gene expression matrix as bulk data matched across patients, and SRT gene expression matrix and spot locations matched ascross spots  
 ```
-SpaceProfiler(PhenotypeVector, BulkExpression, DataSRT, MetaData)  # Predict the phenotype quantity on spots of tissue slice  
+ [EigenGene, EigenPatient, Result]= SpaceProfiler(PhenotypeVector, BulkExpression, DataSRT, MetaData)  # Predict the phenotype quantity on spots of tissue slice  
 ```
 #### Output of SpaceProfiler
-As result, returns the Eigen-Gene vector, Eigen-Patient vector, Cosine similarity vector (Predicted phenotype quantity for spots) and plot for the predicted phenotype quantity on the spot locations  
+As result, returns the Eigen-Gene vector, Eigen-Patient vector, Cosine similarity vector (Predicted phenotype quantity on spots) and Scatter plot for the predicted phenotype quantity on the spot locations  
 ```
 EigenGene.to_csv('Eigen-Gene.csv')                  # Save the Eigen-Gene vector as a cvs file
 EigenPatient.to_csv('Eigen-Patient.csv')            # Save the Eigen-Patient vector as a cvs file
@@ -27,14 +27,16 @@ plt.savefig('Prediction-Plot.png', dpi=300,  bbox_inches = 'tight')    # Save th
 * The SpaceProfiler method is implemented in python and the codes are available as [Python Code](code/SpaceProfiler.py) and [Jupyter Notebook](code/SpaceProfiler.ipynb) modules.
 
 #### Bulk data sets [Data Bulk](Bulk-data)
-For each of the four cancer data sets (BRCA, COAD LUAD, LUSC), the phenotype quantity of patents (Tumor-Purity, Hazard, Stemness and Proliferation) and bulk gene expression matrices whose columns represent the genes and rows represent patients.
+For each of the four cancer data sets (BRCA, COAD LUAD and LUSC), the phenotype quantity of patients (Tumor-Purity, Hazard, Stemness and Proliferation) and bulk gene expression matrices whose columns represent the genes and rows represent patients
 #### SRT data sets [Data SRT](SRT-data)
-For each of the SRT 11 samples, the spatially resolved transcriptomics (SRT) gene expression data matrix whose columns represent spots and rows represent genes. The location of each spot in tissue slice corresponding to each SRT sample.
+For each of the SRT samples, the spatially resolved transcriptomics (SRT) gene expression data matrix whose columns represent spots and rows represent genes, and spot locations denoting the spacial location of each spot in the tissue slice
 
-#### Results of the analysis on four cancer data sets [Result](result)
-The following files proves the results for the analysis on BRCA, COAD, LUAD, LUSC cancer data.
+#### Results of the bulk data analysis on four cancer data sets [Result](result)
+The following files proves the results for the analysis on bulk data of cancer patients.
 * Lists of the Eigen-Genes for cancers and phenotypes with the predicted values over patients [Eigen-Genes](result/Eigen-Genes.xlsx).
 * Lists of the Eigen-Patients for cancers and phenotypes with the predicted values over patients [Eigen-Patients](result/Eigen-Patients.xlsx).
 * GO terms enriched for the sorted list of top predictor genes [GO terms for predictors](result/GO-terms.xlsx). The GO terms enriched for top negative and positive predictors in Eigen-Patient.
+#### Results of the bulk data analysis on four cancer data sets [Result](result)
+The following files proves the results for the analysis on spacial transcriptomics (SRT) data
 * Predicted phenotype quantity on spots [Result](result/Predicted Phenotype Phenotype Quantity.xlsx). Prediction based on similarity between Eigen-Patient and SRT gene expression in each spot.
 * Plots showing the prediction results [Result](result)
