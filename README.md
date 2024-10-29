@@ -1,17 +1,17 @@
 # SpaceProfiler
-SpaceProfiler: A computational method for translating translating information between different (but related) types of data
+SpaceProfiler: A computational method for translating information between different (but related) types of data
 #### Pre-required installations before running SpaceProfiler
 Python libraries pandas, numpy, seaborn, scipy, matplotlib and sklearn are prerequired to be installed before running SpaceProfiler
 #### Input Data to TranNet
-Quantity vector of a cancer-related phenotype across patents, corresponding bulk gene expression data, and spatially resolved transcriptomic data as cvs files
+Quantity vector of a cancer-related phenotype across patents, corresponding bulk gene expression data, and spatially resolved transcriptomic (SRT) data as cvs files
 ```
-BulkExpression = pd.read_csv('Cancer-Bulk-ExprData.csv', index_col=0) # Load the bulk gene expression matrix (columns are genes and rows are patients)
-PhenotypeVector = pd.read_csv('Cancer-Phenotype.csv', index_col=0)     # Load the vector of phenotype quantity matched with the rows of bulk gene expression matrix (a vector across patients)
+BulkExpression = pd.read_csv('Cancer-Bulk-ExprData.csv', index_col=0)    # Load the bulk gene expression matrix (columns are genes and rows are patients)
+PhenotypeVector = pd.read_csv('Cancer-Phenotype.csv', index_col=0)       # Load the vector of phenotype quantity matched with the rows of bulk gene expression matrix (a vector across patients)
 DataSRT = pd.read_csv('SRTsample-SRT-ExprData.csv', index_col=0) # Load the SRT gene expression matrix (columns are spots and rows are genes)  
-MetaData = pd.read_csv('SRTsample-SRT-spot-locations.csv', index_col=0) # Load the spot locations corresponding to SRT gene expression matrix
+MetaData = pd.read_csv('SRTsample-SRT-spot-locations.csv', index_col=0)  # Load the spot locations corresponding to SRT gene expression matrix
 ```
 #### To Run SpaceProfiler
-SpaceProfiler takes two matrices described above and return the transition weight matrix as output
+SpaceProfiler takes a phenotype quantity vector and a bulk gene expression matrix as bulk data matched across patients, and SRT gene expression matrix and spot locations matched ascross spots  
 ```
 SpaceProfiler(PhenotypeVector, BulkExpression, DataSRT, MetaData)  # Predict the phenotype quantity on spots of tissue slice  
 ```
