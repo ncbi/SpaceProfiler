@@ -33,8 +33,8 @@ For each of the SRT 11 samples, the spatially resolved transcriptomics (SRT) gen
 
 #### Results of the analysis on four cancer data sets [Result](result)
 The following files proves the results for the analysis on BRCA, COAD, LUAD, LUSC cancer data.
-* Lists of the Eigen-Genes for cancers and phenotypes with the predicted values over patients [Eigen Genes](result/Eigen-Genes for Phenotypes.xlsx).
-* Lists of the Eigen-Patients for cancers and phenotypes with the predicted values over patients [Eigen Patients](result/Eigen-Patients for Phenotypes.xlsx).
+* Lists of the Eigen-Genes for cancers and phenotypes with the predicted values over patients [Eigen-Genes](result/Eigen-Genes for Phenotypes.xlsx).
+* Lists of the Eigen-Patients for cancers and phenotypes with the predicted values over patients [Eigen-Patients](result/Eigen-Patients for Phenotypes.xlsx).
 * GO terms enriched for the sorted list of top predictor genes [GO terms for predictors](result/GO-terms Enriched for Top Predictors.xlsx). The GO terms enriched for top negative and positive predictors in Eigen-Patient.
 * Predicted phenotype quantity on spots [Result](result/Predicted Phenotype Phenotype Quantity.xlsx). Prediction based on similarity between Eigen-Patient and SRT gene expression in each spot.
 * Plots showing the prediction results [Result](result)
