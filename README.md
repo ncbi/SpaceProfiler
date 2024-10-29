@@ -26,9 +26,9 @@ plt.savefig('Prediction-Plot.png', dpi=300,  bbox_inches = 'tight')    # Plot th
 #### Python [Package](code)
 * The SpaceProfiler method is implemented in python and the codes are available as [Python Code](code/SpaceProfiler.py) and [Jupyter Notebook](code/SpaceProfiler.ipynb) modules.
 
-#### Bulk data sets for four cancers [Data](data/Bulk data)
+#### Bulk data sets for four cancers [Data](Bulk-data)
 For each of the four cancer data sets (BRCA, COAD LUAD, LUSC), the phenotype quantity of patents (Tumor-Purity, Hazard, Stemness and Proliferation) and bulk gene expression matrices whose columns represent the genes and rows represent patients.
-#### SRT data for ten samples [Data](data/SRT data)
+#### SRT data for ten samples [Data](SRT-data)
 For each of the SRT 11 samples, the SRT gene expression whose columns represent spots and rows represent genes. The location of each spot in tissue slice corresponding to each SRT sample.
 
 #### Results of the analysis on four cancer data sets [Result](result)
