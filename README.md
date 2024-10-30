@@ -31,12 +31,12 @@ For each of the four cancer data sets (BRCA, COAD LUAD and LUSC), the phenotype 
 #### SRT data sets [Data SRT](SRT-data)
 For each of the SRT samples, the spatially resolved transcriptomics (SRT) gene expression data matrix whose columns represent spots and rows represent genes, and spot locations denoting the spacial location of each spot in the tissue slice
 
-#### Results of the bulk data analysis on four cancer data sets [Result](result)
+#### Results of the bulk data analysis [Result](result)
 The following files proves the results for the analysis on bulk data of cancer patients.
 * Lists of the Eigen-Genes for cancers and phenotypes with the predicted values over patients [Eigen-Genes](result/Eigen-Genes.xlsx).
 * Lists of the Eigen-Patients for cancers and phenotypes with the predicted values over patients [Eigen-Patients](result/Eigen-Patients.xlsx).
 * GO terms enriched for the sorted list of top predictor genes [GO terms for predictors](result/GO-terms.xlsx). The GO terms enriched for top negative and positive predictors in Eigen-Patient.
-#### Results of the bulk data analysis on four cancer data sets [Result](result)
+#### Results of the SRT data analysis [Result](result)
 The following files proves the results for the analysis on spacial transcriptomics (SRT) data
 * Predicted phenotype quantity on spots [Result](result/Cosine-Similaries.xlsx). Prediction based on similarity between Eigen-Patient and SRT gene expression in each spot.
 * Plots for showing the prediction results over spatial location [Result](result)
